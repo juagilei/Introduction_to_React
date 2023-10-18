@@ -44,22 +44,41 @@ Siga estos pasos para ejecutar el proyecto:
 
    ### Ejercicio 1: Saludar
    
-   Crea un componente llamado "Saludar" que reciba el prop "nombre" y muestre un mensaje de saludo utilizando ese nombre.
+      - Crea un componente llamado "Saludar" que reciba el prop "nombre" y muestre 
+      un mensaje de saludo utilizando ese nombre.
    
    
    
    ### Ejercicio 2: Lista de Productos
    
-   Dada una lista de productos ubicada en el archivo de constantes, crea un componente llamado "Lista" que reciba esta lista como prop y la renderice en la pantalla.
+      - Dada una lista de productos ubicada en el archivo de constantes, crea un componente llamado 
+      "Lista" que reciba esta lista como prop y la renderice en la pantalla.
    
    
    ### Ejercicio 3: Renderizado Condicional en la Lista
    
-   Reutiliza el componente "Lista" que creaste en el ejercicio 2 y añade una funcionalidad de renderizado condicional. Si la longitud de la lista de productos es igual a cero, muestra el mensaje       "No hay elementos en la lista".
+      - Reutiliza el componente "Lista" que creaste en el ejercicio 2 y añade una funcionalidad de 
+      renderizado condicional. Si la longitud de la lista de productos es igual a cero, muestra el               m
+      ensaje  "No hay elementos en la lista".
    
    
    ### Ejercicio 4: Contador
    
-   Crea un contador simple que aumente su valor cada vez que se presiona un botón. Este ejercicio te ayudará a comprender cómo gestionar el estado en React.
+      - Crea un contador simple que aumente su valor cada vez que se presiona un botón. Este ejercicio 
+      te ayudará a comprender cómo gestionar el estado en React.
+
+## EJERCICIOS Introducción-React-02:
+
+   ### Ejercicio 1: Comunicación entre componentes
+      Practicar la comunicación entre componentes mediante la propagación de props.
+   ### Ejercicio 2: Uso de formularios en React
+      - Aprender cómo manejar formularios en React.
+      - Utilizar los eventos onChange y onSubmit en un formulario.
+   ### Ejercicio 3: Enrutamiento (Routing) en React
+      - Aprender a implementar enrutamiento en una aplicación de React.
+      - Utilizar la biblioteca React Router para gestionar las rutas de la aplicación.
+      
+
+
 
 
