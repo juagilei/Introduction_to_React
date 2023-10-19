@@ -10,3 +10,4 @@ export function ThemeProvider ({children}){
         <ThemeContext.Provider value={{Theme, setTheme}} > {children} </ThemeContext.Provider>
     )
 }
+export default ThemeContext
