@@ -77,11 +77,7 @@ Siga estos pasos para ejecutar el proyecto:
    ### Ejercicio 3: Enrutamiento (Routing) en React
       - Aprender a implementar enrutamiento en una aplicación de React.
       - Utilizar la biblioteca React Router para gestionar las rutas de la aplicación.
-   ### Ejercicio extra: useContex
+   ### Ejercicio Extra: useContex
       - Usar useContext para englobar acciones en un contexto en este caso es para porner de día
       o de noche la pantalla.
-      
-
-
-
 
