@@ -311,10 +311,27 @@ Recursos adicionales:
       }
 ```
            
-   3. 
+   3. Como el contexto va englobado en toda la web es interesante ponerlo en el main (main.jsx), ya que así afecta a toda la web.
+```jsx
+      // Documento main.jsx
+      
+      import React from 'react'
+      import ReactDOM from 'react-dom/client'
+      import App from './App.jsx'
+      import { ThemeProvider } from './context/ThemeContext.jsx'
+      
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        <React.StrictMode>
+      // envuelvo a <App /> en el contexto ThemeProvider
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </React.StrictMode>
+      )
+```
 
 
          
-   4. 
-   5.    
-   6. 
+   5. 
+   6.    
+   7. 
