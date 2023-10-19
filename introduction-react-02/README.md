@@ -288,3 +288,33 @@ Recursos adicionales:
 - [Gestión del estado en React](https://es.react.dev/learn/managing-state)
 - [React Router](https://reactrouter.com/en/main/start/tutorial)
 - [Fetch API en JavaScript](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
+
+## Resolución de ejercicios y anotaciones:
+
+### Ejercicio extra: useContext
+   Mediante useContext daremos un contexto a toda la pagina para que se pueda ver de día o de noche.
+
+   1. Creamos una carpeta que contenga los achivos context, pueden haber varios context conde englobar cosas, por lo que normalmente se suelen poner en        una carpeta que los contenga a todos.
+   2. Creamos un archivo para el componente ThemeContext donde:
+```jsx
+   import { createContext } from "react";
+
+   const ThemeContext = createContext()
+
+   export function ThemeProvider ({children}){
+    // indico que se va a enviar a un hijo (children)
+    const[Theme,setTheme]=useState('ligth')
+    return(
+    // indico que lo que envio al hijo son las variables (Theme, setTheme)
+        <ThemeContext.Provider value={{Theme, setTheme}} > {children} </ThemeContext.Provider>
+          )
+      }
+```
+           
+   3. 
+
+
+         
+   4. 
+   5.    
+   6. 
