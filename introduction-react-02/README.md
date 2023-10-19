@@ -314,7 +314,7 @@ Recursos adicionales:
            
    3. Como el contexto va englobado en toda la web es interesante ponerlo en el main (main.jsx), ya que así afecta a toda la web.
       Todos los componentes que estan dentro de App van a tener acceso al contexto y para poder tener acceso a este contexto tengo que exportarlo
-      ( export default ThemeContext ).
+      por defecto por ejemplo ( export default ThemeContext ).
 ```jsx
       // Documento main.jsx
       
