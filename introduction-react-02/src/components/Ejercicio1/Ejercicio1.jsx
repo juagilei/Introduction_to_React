@@ -8,3 +8,5 @@ export default function Ejercicio1() {
     </section>
   )
 }
+
+export function ParentComponent
