@@ -605,7 +605,7 @@ export default function Navegacion() {
   )
 }
 ```
-   por ejemplo en la pagina Abaut ponemos:
+   por ejemplo en la pagina About ponemos:
 ```jsx
 import Navegacion from '../components/Ejercicio3/Navegacion'
 
