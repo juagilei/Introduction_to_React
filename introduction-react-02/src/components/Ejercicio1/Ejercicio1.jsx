@@ -1,4 +1,4 @@
-   // Tengo que importar useState para declarar variables de estado.
+
 // También importo la función declarada en otro archivo TituloEjercicio que usaré 
 // para nombrar los ejercicios.
 import { useState } from 'react'
@@ -57,4 +57,3 @@ export default function Ejercicio1() {
       <ParentComponent />
     </section>
   )
-}

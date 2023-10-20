@@ -288,3 +288,116 @@ Recursos adicionales:
 - [Gestión del estado en React](https://es.react.dev/learn/managing-state)
 - [React Router](https://reactrouter.com/en/main/start/tutorial)
 - [Fetch API en JavaScript](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
+
+## Resolución de ejercicios y anotaciones:
+
+### Ejercicio extra: useContext
+   Mediante useContext daremos un contexto a toda la pagina para que se pueda ver de día o de noche.
+
+   1. Creamos una carpeta que contenga los achivos context, pueden haber varios context conde englobar cosas, por lo que normalmente se suelen poner en        una carpeta que los contenga a todos.
+   2. Creamos un archivo para el componente ThemeContext donde:
+```jsx
+   import { createContext } from "react";
+
+   const ThemeContext = createContext()
+
+   export function ThemeProvider ({children}){
+    // indico que se va a enviar a un hijo (children)
+    const[Theme,setTheme]=useState('ligth')
+    return(
+    // indico que lo que envio al hijo son las variables (Theme, setTheme)
+        <ThemeContext.Provider value={{Theme, setTheme}} > {children} </ThemeContext.Provider>
+          )
+      }
+   export default ThemeContext
+```
+           
+   3. Como el contexto va englobado en toda la web es interesante ponerlo en el main (main.jsx), ya que así afecta a toda la web.
+      Todos los componentes que estan dentro de App van a tener acceso al contexto y para poder tener acceso a este contexto tengo que exportarlo
+      por defecto por ejemplo ( export default ThemeContext ).
+```jsx
+      // Documento main.jsx
+      
+      import React from 'react'
+      import ReactDOM from 'react-dom/client'
+      import App from './App.jsx'
+      import { ThemeProvider } from './context/ThemeContext.jsx'
+      
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        <React.StrictMode>
+      // envuelvo a <App /> en el contexto ThemeProvider
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </React.StrictMode>
+      )
+```
+### Ejercicio 01: Comunicación entre componentes
+   #### Resolución
+   ##### Consejo: Tener en cuenta que una función siempre dee de devolver algo, por lo que siempre hay que poner return () 
+   ##### en lo que queremos devolver y por lo tanto tambien si queremos rederizar (ver en pantalla)
+```jsx
+   // Tengo que importar useState para declarar variables de estado.
+// También importo la función declarada en otro archivo TituloEjercicio que usaré 
+// para nombrar los ejercicios.
+import { useState } from 'react'
+import TituloEjercicio from '../TituloEjercicio'
+
+
+function ChildComponent(props) {
+  // defino ChildComponent y le indico que va a recibir una prop.
+  // en return indico lo que va devolver la función.
+  // pongo lo que quiero renderizar (ver por pantalla) en un contenedor div.
+  // indico la variable a recibir por parte del padre ParentComponent.
+    return(
+    <div>
+      <h2>Componente Hjo</h2>
+      <p>Mensaje: {props.message}</p>
+    </div>
+    )
+    
+  }
+// Creo la función ParentComponent la cual tendrá una variable de estado llamada message.
+// Esta variable se enviará como prop a otro componente llamado ChildComponent.
+// Child component mostrará el valor de message.
+// Mediante el un botón el valor de message cambiará de estado.
+function ParentComponent() {
+// defino la variable message y como va a variar de estado debo de usar el useState
+// para usar useState debo declarar dos variables, una noemal y otra con el prefijo set.
+// la primera guarda el valor inicial y luego lo que va racibiendo de set.
+// la que tiene el prefijo set es la que realiza la acción del cambio de estado.
+  const [message, setMessage] = useState('Message')
+// Tambien nos solicta que cambiemos el estado mediante un boton, porlo que es recomendable.
+// Usar otra función que realice el setMesage (cambiode message).
+
+  const handleButtonClick = () => {
+    setMessage('Message update')
+  }
+  return (
+  // la función ParentComponent devolverá por pantalla un texto donde se vea el estado de message,
+  // además implemento un boton para realizar el cambio de estado llamando a la función handleButtonClick.
+  // Indico a la función ChildComponent la propiedad que le envio.
+  <div>
+    <h2>Componente Padre </h2>
+    <p>Mensaje: {message}</p>
+    <button onClick={handleButtonClick}> Actualizar</button>
+    <ChildComponent message={message} />
+  </div>
+  )
+
+}
+// La función ejercicio1 es a la que llamaré para ejecutar las funciones de este ejercicio.
+// Por lo tanto desde esta función llamare a ParentComponent.
+export default function Ejercicio1() {
+// LLamo a la función ParentComponent
+  return (
+    <section className="caja-ejercicio">
+      <TituloEjercicio>Este es el ejercicio 1</TituloEjercicio>
+      <ParentComponent />
+    </section>
+  )
+}
+```
+
+
+      
