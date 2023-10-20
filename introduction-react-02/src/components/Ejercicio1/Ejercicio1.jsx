@@ -56,4 +56,4 @@ export default function Ejercicio1() {
       <TituloEjercicio>Este es el ejercicio 1</TituloEjercicio>
       <ParentComponent />
     </section>
-  )
+  )}
