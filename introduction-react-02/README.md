@@ -399,6 +399,7 @@ export default function Ejercicio1() {
 }
 ```
 ### Ejercicio 2: Crecación de formularios.
+#### Resolución
 ```jsx
 import { useState } from "react"
 
@@ -467,6 +468,127 @@ const handleSubmit=(event)=>{
 }
 ```
 #### Solo faltaía llamar al Ejercicio 2 desde el archivo App.jsx y a formulario desde el archvo Ejercicio 2
+
+### Ejercicio 3: Enrutamiento (Routing) en React
+#### Resolución:
+Vamos a crear 4 paginas en las que podemos acceder desde la pagina principal, cramos las pagina y el enrutamiento:
+
+1. Para esto tenemos que importar el BrowserRouter en el fichero main.jsx y englobamos a App con   <BrowserRouter>
+   ```jsx
+   import React from 'react'
+   import ReactDOM from 'react-dom/client'
+   //Importamos BrowserRouter de react-router-dom
+   import { BrowserRouter } from 'react-router-dom'
+   import App from './App.jsx'
+   import '../index.css'
+   
+   ReactDOM.createRoot(document.getElementById('root')).render(
+     <React.StrictMode>
+       <BrowserRouter>
+         <App />
+       </BrowserRouter>
+     </React.StrictMode>
+   )
+   ```
+2. Creamos las paginas para el enrutamiento en una nueva carpeta llamada pages donde ponemos las siguientes paginas (Home, About, Contact y NotFound):
+   La pagina home es la que utilizaremos como principal, por lo que todo lo que hemos puesto hasta el momento en App.jsx lo pasamos a home y App.jsx lo vamos a usar como enrutador de las     paginas.
+   
+3. Vamos rellenando las paginas:
+   #### Home.jsx:
+   ```jsx
+   import Ejercicio1 from './components/Ejercicio1/Ejercicio1'
+   import Footer from './components/Footer'
+   import Header from './components/Header'
+   import TituloPrincipal from './components/TituloPrincipal'
+   import './index.css'
+   import Ejercicio2 from './components/Ejercicio2/Ejercicio2'
+   
+   export default function App() {
+     return (
+       <>
+         <Header />
+         <main>
+           <TituloPrincipal />
+           <Ejercicio1 />
+           <Ejercicio2 />
+
+      </main>
+      <Footer />
+    </>
+     )
+   }
+   ```
+   #### Abauto.jsx:
+   ```jsx
+      export default function About() {
+     return (
+       <div>
+         <h1>Página sobre nosotros</h1>
+       </div>
+     )
+   }
+   ```
+   #### Contact.jsx:
+ ```jsx
+      export default function Contact() {
+        return (
+          <div>
+            <h1>Página de Formulario de contacto</h1>
+          </div>
+        )
+      }
+```
+   ### NotFound.jsx:
+   Sería la opción a pagina no encontrada, por lo que le añadimos un link que nos develva a la pagina de inico home.
+   ```jsx
+import { Link } from 'react-router-dom'
+
+export default function NotFound() {
+  return (
+    <div>
+      <h1>Error 404 - Página no encontrada</h1>
+      <Link to="/">Volver al inicio</Link>
+    </div>
+  )
+}
+```
+### App.jsx:
+Añadimos todas las rutas delas paginas
+´´´jsx
+      // Importamos Routes y Route de react-router-dom
+      import { Route, Routes } from 'react-router-dom'
+      import '../index.css'
+      import About from './pages/About'
+      import Contact from './pages/Contact'
+      import Home from './pages/Home'
+      import NotFound from './pages/NotFound'
+      
+      export default function App() {
+        return (
+          // Definimos las Rutas con el componente Padre Routes
+          <Routes>
+            <!-- Definimos cada ruta de nuestra app con el componente Route. En este caso decimos que es el index y no hace -->
+            falta poner ninguna ruta.
+            <Route index element={<Home />} />
+            <!-- Definimos la ruta que corresponde en "path" y en element ponemos el componente pagina que tiene que ser renderizado.-->
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <!-- Usar path="*" significa "coincidir con cualquier cosa", por lo que esta ruta
+              actúa como una captura de todas las URL para las cuales no tenemos rutas
+              explícitas definidas. -->
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        )
+      }
+```
+
+   
+      
+
+5. 
+
+
+
 
 
       
