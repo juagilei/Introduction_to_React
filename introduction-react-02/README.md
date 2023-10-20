@@ -466,6 +466,7 @@ const handleSubmit=(event)=>{
    )
 }
 ```
+#### Solo faltaía llamar al Ejercicio 2 desde el archivo App.jsx y a formulario desde el archvo Ejercicio 2
 
 
       
