@@ -618,7 +618,13 @@ export default function About() {
   )
 }
 ```
+### Ejercicio 4: Llamadas a API en React
+   - Aprender a realizar llamadas a una API externa en una aplicación de React.
+   - Utilizar la función fetch para obtener datos de una API.
+   - Renderizar los personajes de la api de Rick & Morty y mostrar su imagen y nombre.
 
+#### Resolución:
+1. 
 
 
 
