@@ -1,5 +1,5 @@
-import Navegacion from './Navegacion'
-import TituloEjercicio from '../TituloEjercicio'
+import Navegacion from '../Ejercicio3/Navegacion'
+import TituloEjercicio from '..//TituloEjercicio'
 
 export default function Ejercicio3() {
   return (
