@@ -334,6 +334,8 @@ Recursos adicionales:
 ```
 ### Ejercicio 01: Comunicación entre componentes
    #### Resolución
+   ##### Consejo: Tener en cuenta que una función siempre dee de devolver algo, por lo que siempre hay que poner return () 
+   ##### en lo que queremos devolver y por lo tanto tambien si queremos rederizar (ver en pantalla)
 ```jsx
    // Tengo que importar useState para declarar variables de estado.
 // También importo la función declarada en otro archivo TituloEjercicio que usaré 
