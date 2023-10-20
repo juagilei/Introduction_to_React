@@ -554,7 +554,9 @@ export default function NotFound() {
 ```
 ### App.jsx:
 Añadimos todas las rutas delas paginas
-´´´jsx
+
+```jsx
+
       // Importamos Routes y Route de react-router-dom
       import { Route, Routes } from 'react-router-dom'
       import '../index.css'
@@ -562,7 +564,6 @@ Añadimos todas las rutas delas paginas
       import Contact from './pages/Contact'
       import Home from './pages/Home'
       import NotFound from './pages/NotFound'
-      
       export default function App() {
         return (
           // Definimos las Rutas con el componente Padre Routes
