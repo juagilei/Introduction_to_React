@@ -585,7 +585,7 @@ Añadimos todas las rutas delas paginas
 
 4. Creamos un componente navegación que se muestre en el ejercicio 3 y en todas las paginas excepto en la de NotFound
 ```jsx
-mport { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Navegacion() {
   return (
