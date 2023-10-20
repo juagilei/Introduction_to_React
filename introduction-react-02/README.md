@@ -583,10 +583,42 @@ Añadimos todas las rutas delas paginas
       }
 ```
 
-   
-      
+4. Creamos un componente navegación que se muestre en el ejercicio 3 y en todas las paginas excepto en la de NotFound
+```jsx
+mport { Link } from 'react-router-dom'
 
-5. 
+export default function Navegacion() {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Inicio</Link>
+        </li>
+        <li>
+          <Link to="/about">Sobre nosotros</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contacto</Link>
+        </li>
+      </ul>
+    </nav>
+  )
+}
+```
+   por ejemplo en la pagina Abaut ponemos:
+```jsx
+import Navegacion from '../components/Ejercicio3/Navegacion'
+
+export default function About() {
+  return (
+    <div>
+      <h1>Página sobre nosotros</h1>
+      <Navegacion />
+    </div>
+  )
+}
+```
+
 
 
 
