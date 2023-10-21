@@ -7,11 +7,16 @@ import Ejercicio1 from '../components/Ejercicio1/Ejercicio1'
 import Ejercicio2 from '../components/Ejercicio2/Ejercicio2'
 import Ejercicio3 from '../components/Ejercicio3/Ejercicio3'
 import Ejercicio4 from '../components/Ejercicio4/Ejercicio4'
-export default function App() {
+import { useContext } from 'react'
+import ThemeContext from '../context/ThemeContext'
+export default function Home() {
+
+  const[theme, setTheme] = useContext(ThemeContext)
+
   return (
     <>
       <Header />
-      <main>
+      <main style={{backgroundColor: theme == 'light' ? 'white':'darkgray'}}>
         <TituloPrincipal />
         <Ejercicio1 />
         <Ejercicio2 />
